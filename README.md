@@ -1,6 +1,6 @@
 # Tugas CRUD PBKK-B
 Florentino Benedictus 5025201222
-## Tugas
+## Tugas (Sebelum Update Challenge)
 ### List Data
 ![](https://github.com/florentinobenedictus/crud-pbkk/blob/main/Screenshot/List%20Siswa.png)
 ### Buat Data (Multiple Insert ke Tabel)
@@ -17,8 +17,8 @@ Florentino Benedictus 5025201222
 ![](https://github.com/florentinobenedictus/crud-pbkk/blob/main/Screenshot/Phpmyadmin.png)
 
 ## Challenge
-User teratas yang ingin ditambahkan ketika create data akan diminta mengisi email. Selanjutnya ketika menyimpan data siswa, data email juga akan tersimpan pada tabel Email pada database
-### Buat Data (Jika menggunakan Multi Insert data yang pertama akan diminta mengisi email)
+Ketika menyimpan data siswa, data email juga akan tersimpan pada tabel Email pada database
+### Buat Data
 ![](https://github.com/florentinobenedictus/crud-pbkk/blob/main/Screenshot/Challenge%20-%20Create%20Data.png)
 ### Detail Data
 ![](https://github.com/florentinobenedictus/crud-pbkk/blob/main/Screenshot/Challenge%20-%20List%20Data.png)
