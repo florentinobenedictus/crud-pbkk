@@ -56,6 +56,15 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
 							
+							<div>
+                                <input class="mt-3 form-control form-control-lg @error('email1') is-invalid @enderror" name="email1[]" type="text"
+                                       placeholder="Email Pertama" value="{{ old('email1') }}" required>
+                            </div>
+
+                            @error('email1')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+							
 							<br>
 							
 							<div class="siswa"></div>
