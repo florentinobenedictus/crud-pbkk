@@ -48,7 +48,7 @@ class SiswaController extends Controller
 			'ortu' => 'required|max:30'
         ]); */
         //Siswa::create($validatedData);
-		$i=0;
+		
 		foreach ($validatedData['nama'] as $item => $value){
 				$data2 = array(
 					'nama' => $validatedData['nama'][$item],
@@ -56,14 +56,11 @@ class SiswaController extends Controller
 					'ortu' => $validatedData['ortu'][$item]
 				);
 				Siswa::create($data2);
-				if($i < 1){
-					$dataemail = array(
-						'pemilik' => $validatedData['nama'][$item],
-						'judul' => $validatedData['email1'][$item]
-					);
-					Email::create($dataemail);
-				}
-				$i++;
+				$dataemail = array(
+					'pemilik' => $validatedData['nama'][$item],
+					'judul' => $validatedData['email1'][$item]
+				);
+				Email::create($dataemail);
 		}
 		
         return redirect()->route('home')->with('tambah_data', 'Penambahan Data berhasil');
