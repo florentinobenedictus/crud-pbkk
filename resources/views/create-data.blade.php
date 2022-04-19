@@ -100,13 +100,14 @@
 		addsiswa();
 	});
 	function addsiswa(){
-		var siswa = '<div><div><input class="mt-3 form-control form-control-lg @error('nama') is-invalid @enderror" name="nama[]" type="text" placeholder="Nama" value="{{ old('nama') }}" required></div>@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('alamat') is-invalid @enderror" name="alamat[]" type="text" placeholder="Alamat" value="{{ old('alamat') }}" required></div>@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('ortu') is-invalid @enderror" name="ortu[]" type="text" placeholder="Orang Tua" value="{{ old('ortu') }}" required></div>@error('ortu')<div class="invalid-feedback">{{ $message }}</div>@enderror<br></div>';
+		var siswa = '<div><div><input class="mt-3 form-control form-control-lg @error('nama') is-invalid @enderror" name="nama[]" type="text" placeholder="Nama" value="{{ old('nama') }}" required></div>@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('alamat') is-invalid @enderror" name="alamat[]" type="text" placeholder="Alamat" value="{{ old('alamat') }}" required></div>@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('ortu') is-invalid @enderror" name="ortu[]" type="text" placeholder="Orang Tua" value="{{ old('ortu') }}" required></div>@error('ortu')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('email1') is-invalid @enderror" name="email1[]" type="text" placeholder="Email Pertama" value="{{ old('email1') }}" required></div>@error('email1')<div class="invalid-feedback">{{ $message }}</div>@enderror<br></div>';
 		$('.siswa').append(siswa);
 	};
 	$('#removesiswa').on('click', function(){
 		$('.siswa').empty();
 	});
 </script>
+
 
 
 </body>
