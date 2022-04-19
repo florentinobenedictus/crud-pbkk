@@ -15,4 +15,7 @@ class Siswa extends Model
 		'alamat',
 		'ortu'
 	];
+	public function email(){
+		return $this->hasMany(Email::class);
+	}
 }
