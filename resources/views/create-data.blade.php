@@ -57,13 +57,21 @@
                             @enderror
 							
 							<br>
+							
+							<div class="siswa"></div>
 							<div class="form-group row">
 									<label class="col-sm-2 col-form-label"></label>
 									<div class="col-sm-10">
-										<a href="#" class="addsiswa btn btn-primary" style=" float: right">Tambah Jumlah Data</a>
+										<a href="#" name="addsiswa" id="addsiswa" class="btn btn-success" style=" float: right">Tambah Jumlah Data</a>
 									</div>
 								</div>
-							<div class="siswa"></div>
+							<br>
+							<div class="form-group row">
+									<label class="col-sm-2 col-form-label"></label>
+									<div class="col-sm-10">
+										<a href="#" name="removesiswa" id="removesiswa" class="btn btn-danger" style=" float: right">Clear</a>
+									</div>
+								</div>
                         </form>
                         
 						
@@ -79,23 +87,17 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$('.addsiswa').on('click', function(){
+	$('#addsiswa').on('click', function(){
 		addsiswa();
 	});
 	function addsiswa(){
-		//backup
-		//var siswa = '<div><div><input class="mt-3 form-control form-control-lg @error('nama') is-invalid @enderror" name="nama[]" type="text" placeholder="Nama" value="{{ old('nama') }}" required></div>@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('alamat') is-invalid @enderror" name="alamat[]" type="text" placeholder="Alamat" value="{{ old('alamat') }}" required></div>@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('ortu') is-invalid @enderror" name="ortu[]" type="text" placeholder="Orang Tua" value="{{ old('ortu') }}" required></div>@error('ortu')<div class="invalid-feedback">{{ $message }}</div>@enderror<br><div class="form-group row"><label class="col-sm-2 col-form-label"></label><div class="col-sm-10"><a href="#" class="remove btn btn-danger" style=" float: right">Kurangi Jumlah Data</a></div></div></div>';
-		
-		var siswa = '<div><div><input class="mt-3 form-control form-control-lg @error('nama') is-invalid @enderror" name="nama[]" type="text" placeholder="Nama" value="{{ old('nama') }}" required></div>@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('alamat') is-invalid @enderror" name="alamat[]" type="text" placeholder="Alamat" value="{{ old('alamat') }}" required></div>@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('ortu') is-invalid @enderror" name="ortu[]" type="text" placeholder="Orang Tua" value="{{ old('ortu') }}" required></div>@error('ortu')<div class="invalid-feedback">{{ $message }}</div>@enderror<br><div class="form-group row"><label class="col-sm-2 col-form-label"></label><div class="col-sm-10"><a href="#" class="remove btn btn-danger" style=" float: right">Kurangi Jumlah Data</a></div></div></div>';
-		
-		//var siswa = '<div></div>';
+		var siswa = '<div><div><input class="mt-3 form-control form-control-lg @error('nama') is-invalid @enderror" name="nama[]" type="text" placeholder="Nama" value="{{ old('nama') }}" required></div>@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('alamat') is-invalid @enderror" name="alamat[]" type="text" placeholder="Alamat" value="{{ old('alamat') }}" required></div>@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror<div><input class="mt-3 form-control form-control-lg @error('ortu') is-invalid @enderror" name="ortu[]" type="text" placeholder="Orang Tua" value="{{ old('ortu') }}" required></div>@error('ortu')<div class="invalid-feedback">{{ $message }}</div>@enderror<br></div>';
 		$('.siswa').append(siswa);
 	};
-	$('.remove').live('click', function(){
-		$(this).parent().parent().parent().remove();
+	$('#removesiswa').on('click', function(){
+		$('.siswa').empty();
 	});
 </script>
-
 
 
 </body>
